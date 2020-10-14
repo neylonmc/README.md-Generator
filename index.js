@@ -33,6 +33,7 @@ function promptUser() {
         choices: [
             "IBM", "MIT", "SIL", "Apache",
         ],
+        checked: true,
     },
     {
         type: "input",
@@ -72,13 +73,15 @@ function writeToFile(answers) {
 ### Description
 ${answers.description}
 ## Table of Contents
-*[Installation](#installation)
-*[Usage](#usage)
-*[Credits](#credits)
-*[License](#license)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
     
 ## Installation
+
 ${answers.installation}
+
 
 ## Usage
 ${answers.usage}
@@ -109,6 +112,6 @@ promptUser()
 .then(function() {
     console.log("You did it!");
 })
-.then(function(err) {
+.catch(function(err) {
     console.log(err); 
 });
