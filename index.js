@@ -62,6 +62,41 @@ function promptUser() {
 
 )}; 
 
+function writeToFile(answers) {
+    return `
+# ${answers.title}
+### Description
+${answers.description}
+## Table of Contents
+*[Installation](#installation)
+*[Usage](#usage)
+*[Credits](#credits)
+*[License](#license)
+    
+## Installation
+${answers.installation}
+
+## Usage
+${answers.usage}
+
+## License
+${answers.license}
+
+## Contribuiting
+${answers.credits}
+
+## Badges
+
+
+## Tests
+${answers.tests}
+
+## Questions? Contact Me
+GitHub: [${answers.github}]("https://github.com/${answers.github}")
+Email: [${answers.email}]("mailto:${answers.email}") `
+
+};
+
 promptUser()
 .then(function(answers) {
     const readMe = writeToFile(answers);
