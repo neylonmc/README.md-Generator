@@ -62,4 +62,14 @@ function promptUser() {
 
 )}; 
 
-promptUser();
+promptUser()
+.then(function(answers) {
+    const readMe = writeToFile(answers);
+    return writeFilesAsync("README.md", readMe);
+})
+.then(function() {
+    console.log("You did it!");
+})
+.then(function(err) {
+    console.log(err); 
+});
