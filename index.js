@@ -24,7 +24,7 @@ function promptUser() {
     {
     type: "input",
     name: "usage",
-    message: "Provide instructions and examples for use."
+    message: "Provide instructions and examples for use. Included screenshots as needed."
     },
 
     {
@@ -42,8 +42,8 @@ function promptUser() {
     },   
     {
         type: "input",
-        name: "credits",
-        message: "Who contributed to this project?"
+        name: "contributing",
+        message: "If you would like other developers to contribute to your application or package, please provide guidelines for how to do so."
     },
     {
         type: "input",
@@ -85,7 +85,7 @@ ${answers.usage}
 ${answers.license}
 
 ## Contribuiting
-${answers.credits}
+${answers.contributing}
 
 ## Badges
 
