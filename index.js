@@ -2,7 +2,6 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
-const writeFilesAsync = util.promisify(fs.writeFile);
 
 function promptUser() {
     return inquirer.prompt([
@@ -48,7 +47,7 @@ function promptUser() {
     {
         type: "input",
         name: "test",
-        message: "Provide example how to run the code."
+        message: "If applicable, please provide any tests written for your application and provide examples on how to run them."
     },
     {
         type: "input",
@@ -63,6 +62,9 @@ function promptUser() {
 ]
 
 )}; 
+
+const writeFilesAsync = util.promisify(fs.writeFile);
+
 
 function writeToFile(answers) {
     return `
