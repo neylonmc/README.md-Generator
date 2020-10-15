@@ -79,9 +79,9 @@ ${answers.description}
 \n* [License](#license)
     
 ## Installation
-
+\`\`\`
 ${answers.installation}
-
+\`\`\`
 
 ## Usage
 ${answers.usage}
