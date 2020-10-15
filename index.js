@@ -73,10 +73,10 @@ function writeToFile(answers) {
 ### Description
 ${answers.description}
 ## Table of Contents
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)
+\n* [Installation](#installation)
+\n* [Usage](#usage)
+\n* [Credits](#credits)
+\n* [License](#license)
     
 ## Installation
 
