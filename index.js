@@ -33,7 +33,6 @@ function promptUser() {
         choices: [
             "IBM", "MIT", "SIL", "Apache",
         ],
-        checked: true,
     },
     {
         type: "input",
@@ -87,13 +86,10 @@ ${answers.installation}
 ${answers.usage}
 
 ## License
-${answers.license}
+[![License](https://img.shields.io/badge/License-${answers.license}%202.0-blue.svg)](https://opensource.org/licenses/${answers.license})
 
 ## Contribuiting
 ${answers.contributing}
-
-## Badges
-
 
 ## Tests
 ${answers.tests}
@@ -115,3 +111,6 @@ promptUser()
 .catch(function(err) {
     console.log(err); 
 });
+
+
+//NOTES DID NOT COMMIT BADGE
