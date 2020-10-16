@@ -13,7 +13,7 @@ function promptUser() {
     {
     type: "input",
     name: "description",
-    message: "Please describe your project in detail for your REAME."
+    message: "Please describe your project in detail for your README."
     },
     {
     type: "input",
@@ -31,14 +31,9 @@ function promptUser() {
         name: "license",
         message: "Please provide any contribution guidelines.",
         choices: [
-            "IBM", "MIT", "SIL", "Apache",
+            "MIT", "GPLv2", "Apache", "Other",
         ],
     },
-    {
-        type: "input",
-        name: "badge",
-        message: "Add something for badge."
-    },   
     {
         type: "input",
         name: "contributing",
@@ -92,7 +87,7 @@ ${answers.usage}
 ${answers.contributing}
 
 ## Tests
-${answers.tests}
+${answers.test}
 
 ## Questions? Contact Me
 GitHub: [${answers.github}]("https://github.com/${answers.github}")
@@ -103,7 +98,7 @@ Email: [${answers.email}]("mailto:${answers.email}") `
 promptUser()
 .then(function(answers) {
     const readMe = writeToFile(answers);
-    return writeFilesAsync("README.md", readMe);
+    return writeFilesAsync("userREADME.md", readMe);
 })
 .then(function() {
     console.log("You did it!");
@@ -111,6 +106,3 @@ promptUser()
 .catch(function(err) {
     console.log(err); 
 });
-
-
-//NOTES DID NOT COMMIT BADGE
