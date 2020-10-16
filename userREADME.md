@@ -5,12 +5,11 @@ This command-line application allows for a quick and easy creation of a README.
 ## Table of Contents
 
 * [Installation](#installation)
-
 * [Usage](#usage)
-
-* [Credits](#credits)
-
+* [Contributing](#contributing)
 * [License](#license)
+* [Tests](#tests)
+* [Questions](#questions)
     
 ## Installation
 ```
@@ -23,7 +22,7 @@ The user will need to type $ node index to start the application.
 ## License
 [![License](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://opensource.org/licenses/MIT)
 
-## Contribuiting
+## Contributing
 N/A
 
 ## Tests

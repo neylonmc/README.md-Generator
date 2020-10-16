@@ -83,7 +83,7 @@ ${answers.usage}
 ## License
 [![License](https://img.shields.io/badge/License-${answers.license}%202.0-blue.svg)](https://opensource.org/licenses/${answers.license})
 
-## Contribuiting
+## Contributing
 ${answers.contributing}
 
 ## Tests
