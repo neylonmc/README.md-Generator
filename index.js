@@ -1,8 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const generateMarkdown = require("./utils/generateMarkdown");
 
-
+//Questions to ask the user about their project
 function promptUser() {
     return inquirer.prompt([
     {
@@ -27,77 +28,41 @@ function promptUser() {
     },
 
     {
-        type: "checkbox",
-        name: "license",
-        message: "Please provide any contribution guidelines.",
-        choices: [
-            "MIT", "GPLv2", "Apache", "Other",
+    type: "checkbox",
+    name: "license",
+    message: "Please provide any contribution guidelines.",
+    choices: [
+        "MIT", "GPLv2", "Apache", "Other",
         ],
     },
     {
-        type: "input",
-        name: "contributing",
-        message: "If you would like other developers to contribute to your application or package, please provide guidelines for how to do so."
+    type: "input",
+    name: "contributing",
+    message: "If you would like other developers to contribute to your application or package, please provide guidelines for how to do so."
     },
     {
-        type: "input",
-        name: "test",
-        message: "If applicable, please provide any tests written for your application and provide examples on how to run them."
+    type: "input",
+    name: "test",
+    message: "If applicable, please provide any tests written for your application and provide examples on how to run them."
     },
     {
-        type: "input",
-        name: "github",
-        message: "What is your GitHub user name?"
+    type: "input",
+    name: "github",
+    message: "What is your GitHub user name?"
     },{
-        type: "input",
-        name: "email",
-        message: "What is your email?"
+    type: "input",
+    name: "email",
+    message: "What is your email?"
     },
-    
 ]
-
 )}; 
 
 const writeFilesAsync = util.promisify(fs.writeFile);
 
-
-function writeToFile(answers) {
-    return `
-# ${answers.title}
-### Description
-${answers.description}
-## Table of Contents
-\n* [Installation](#installation)
-\n* [Usage](#usage)
-\n* [Credits](#credits)
-\n* [License](#license)
-    
-## Installation
-\`\`\`
-${answers.installation}
-\`\`\`
-
-## Usage
-${answers.usage}
-
-## License
-[![License](https://img.shields.io/badge/License-${answers.license}%202.0-blue.svg)](https://opensource.org/licenses/${answers.license})
-
-## Contributing
-${answers.contributing}
-
-## Tests
-${answers.test}
-
-## Questions? Contact Me
-GitHub: [${answers.github}]("https://github.com/${answers.github}")
-Email: [${answers.email}]("mailto:${answers.email}") `
-
-};
-
+//Generates the users answers to the correct file and creates a readme file based on the users answers
 promptUser()
 .then(function(answers) {
-    const readMe = writeToFile(answers);
+    const readMe = generateMarkdown(answers);
     return writeFilesAsync("userREADME.md", readMe);
 })
 .then(function() {
