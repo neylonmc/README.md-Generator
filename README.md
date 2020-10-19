@@ -7,7 +7,7 @@ A quality README is important for any open source project on GitHub. This comman
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Conact](#contact)
+* [Contact](#contact)
 
 ## Installation
 ```
@@ -16,11 +16,11 @@ You will need Node.js to run this application.
 
 ## Usage 
 
-The README Generator is a command-line application. To get started, this user will type node index in thier command line and a series of questions will appear (as seen below). 
+The README Generator is a command-line application. To get started, this user will type node index in their command line and a series of questions will appear (as seen below). 
 
 <img src= "assets/code.png" alt="Screenshot of the code.">
 
-Once the user inputs their answers, the answers will appear in the userREADME file and be in a Markdown format. 
+Once the user inputs their answers, the answers will appear in the userREADME file and be in a markdown format. 
 
 <img src= "assets/application.gif" alt="GIF of application">
 
@@ -29,7 +29,7 @@ Once the user inputs their answers, the answers will appear in the userREADME fi
 
 ## Contact
 
-GitHub: [neylonmc]("https://github.com/neylonmc")
-Email: [neylonmc]("mailto:neylonmc") 
+* GitHub: [neylonmc]("https://github.com/neylonmc")
+* Email: [neylonmc@gmail.com]("mailto:neylonmc@gmail.com") 
 
 
